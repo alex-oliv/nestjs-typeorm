@@ -7,22 +7,22 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-@Entity('users')
+@Entity('users', { schema: 'persons' })
 export class User {
   @PrimaryGeneratedColumn({ type: 'int8' })
   id!: number;
 
   @Column()
-  name: string;
+  name!: string;
 
   @Column()
-  username: string;
+  username!: string;
 
   @Column()
-  email: string;
+  email!: string;
 
   @Column()
-  password: string;
+  password!: string;
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt!: Date;

@@ -13,7 +13,7 @@ export const options: DataSourceOptions = {
   username: configService.get('DB_USERNAME'),
   password: configService.get('DB_PASSWORD'),
   database: configService.get('DB_DATABASE'),
-  entities: ['dist/**/*.entity.js'],
+  entities: ['dist/**/*{.entity,.view}.js'],
   migrations: ['./dist/database/migrations/*.js'],
 };
 
